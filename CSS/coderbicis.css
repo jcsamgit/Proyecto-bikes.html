@@ -1,0 +1,349 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: blanchedalmond;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 6px 30px;
+    color: rgb(64, 5, 119);
+    display: block;
+    
+}
+nav ul li a:hover {
+    background-color: rgb(179, 141, 84);
+    
+}
+
+/* submenu */
+nav ul {
+    list-style: none;
+    font-size:0 /* truco por el uso de inline-block*/
+ }
+nav li {
+    display: inline-block;
+    /* width: 25%; */
+    position:relative;
+    font-size: 14px;
+ }
+nav ul ul {
+    position: absolute;
+    
+    display: none;
+ }
+nav ul ul li {
+    display: block;
+    text-align: center;
+    color: rgb(64, 5, 119);
+    /* margin-left: -15px; */
+    padding: 10px 0 10px 0px;
+    /* list-style-position:inside; */
+    position: relative;
+    /* right: 25px; */
+    width: 130px;
+ }
+nav ul li:hover ul {
+    
+    display:block;
+    background-color: rgb(179, 141, 84);
+    /* max-width:90px; */
+    z-index: 2;
+ }
+ nav ul ul li:hover {
+    background-color:blanchedalmond;
+
+ }
+/* submenu  */
+
+
+h1 {
+    text-align: center;
+    /* font-size: 60px; */
+}
+#tituloBlanco{
+    color: white;
+}
+
+p{
+    padding: 2px 3px;
+    font-size: 20px;
+    background: rgb(255,235,205);
+    background: linear-gradient(90deg, rgba(255,235,205,0.9108018207282913) 0%, rgba(255,255,255,0.9108018207282913) 94%, rgba(255,255,255,1) 100%);
+
+    font-style: oblique;    
+}
+
+.parrafo{
+    margin: 5% 10% 5% 10%;
+    /* background-color: rgb(202, 201, 190); */
+    color: black;
+}
+
+
+table thead tr td{
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;    
+    color: rgb(211, 106, 106);
+}
+table {
+    border-collapse: collapse;
+    border: 2px solid white;
+    margin: 40px;
+    margin-bottom: 80px;
+    background: rgb(255,235,205);
+    background: linear-gradient(90deg, rgba(255,235,205,0.9108018207282913) 0%, rgba(255,255,255,0.9108018207282913) 94%, rgba(255,255,255,1) 100%);
+    color: black;
+    
+}
+table td{
+    border-collapse: collapse;
+    border: 2px solid white;
+    padding: 10px;
+}
+ol li{
+    line-height: 30px;    
+    list-style: upper-alpha;
+    list-style-position: inside;
+}
+ol{
+    margin-bottom: 60px;
+}
+
+body {
+    /* margin: 40px; */
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#VideoCenter {
+    
+    /* display: block; */
+    /* margin-left: 30vh; */
+    /* margin-top: 70px; */
+    /* margin-bottom: 70px; */
+    max-width: 100%;
+    max-height: 350px;
+}
+
+
+img {
+    height: 200px;
+    width: 270px;
+    /* display: inline-block; */
+    margin: 30px 0 30px 0;
+    transition: 1.5s;
+    
+
+}
+img:hover{
+    /* transform:scale(2,2) */
+    
+/* como hago para que la imagen escala se ubique justo en el centro de la pantalla? */
+
+}
+
+
+.BicisCentradas{
+    /* margin: auto; */
+    /* align-content: space-evenly; */
+    /* margin: center; */
+    /* position: absolute; */
+    /* top: 0%; */
+    /* right: 10%; */
+    /* background-color: rgb(179, 141, 84); */
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    
+}
+#galeria{
+    margin: 0px;
+}
+
+footer{
+    /* margin-top: 90vh; */
+    background-color: burlywood;
+    /* background: rgb(11,11,11);
+    background: linear-gradient(180deg, rgba(11,11,11,1) 0%, rgba(50,52,6,1) 11%, rgba(227,235,153,1) 100%); */
+    /* margin-top: 40px; */
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    
+}
+
+footer ul li{
+    display: inline-block;
+    /* height: 30px;
+    padding: 20px;
+    margin-top: 10px; */
+    margin-left: 25px;
+
+}
+footer ul li a{
+    text-decoration: none;
+    color:blue;
+    animation-name: animaFooter;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+#punteado{
+    border: 5px dotted red;
+    margin-top: 40px;
+    color: black;
+    background: rgb(255,235,205);
+    background: linear-gradient(90deg, rgba(255,235,205,0.9108018207282913) 0%, rgba(255,255,255,0.9108018207282913) 64%, rgba(255,255,255,1) 100%);
+}
+
+
+/* aqui empieza grid y fist mobile responsive */
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 250px 60% 70px;
+    grid-row-gap: 65px;
+    grid-template-areas: 
+    
+                        "header"
+                        "main"
+                        "footer";
+
+}
+#negro{
+    background-color: black;
+}
+
+header{
+    grid-area: header;
+    /* background-color: chartreuse; */
+}
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+footer{
+    grid-area:footer;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+
+}
+h1{
+    max-width: 100%;
+    font-size: 200%;
+    margin-top: 30px;
+}
+nav{
+    margin-top: 30px;
+
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+}
+fieldset{
+    margin: 20px 0 20px 0;
+}
+
+@keyframes animaFooter{
+    0% {color: burlywood;}
+    25% {color:rgb(38, 8, 148);}
+    75% {
+        color:blue;
+        transform: rotate(30deg);
+    }
+    100% {
+        color: burlywood;
+        /* font-size: 20px; */
+        transform: rotate(70deg);
+        transition: 2s;
+    }
+}
+
+/* para tablet */
+@media only screen and (min-width: 768px) {
+    nav ul{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #formulario{
+        display: inline-block;
+        
+    }
+
+}
+
+/* para escritorio */
+@media only screen and (min-width: 1024px){
+
+    body{
+        grid-template-rows: 150px 80% 50px;
+        grid-row-gap: 30px;
+    }
+    #negro{
+        background-color: black;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    main{
+        display: flex;
+        flex-direction: row;
+        /* flex-direction: column; */
+        align-items: initial;
+        /* justify-items: center; */
+        justify-content: center;
+    }
+    #formulario{
+        display: inline-block
+    }
+
+    #VideoCenter{
+        margin-left: 50px;
+
+    }
+
+    #mainBeneficios{
+        display: flex;
+        align-items: flex-start;
+    }
+    /* revisar ponerle margin al footer no sirve */
+    footer{
+        margin-bottom: 0;
+    }
+
+
+}
+#carouselExampleControls{
+    width: 90%;
+    height: 50%;
+}
+.btn {
+    position: fixed;
+    top: 0px;
+}
+
+.menu__lista{
+    margin-bottom: 0px;
+}

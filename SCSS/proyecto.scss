@@ -1,0 +1,855 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$colorMenu: blanchedalmond;
+$colorFooter: burlywood;
+$colorFacebook: #3b5999;
+$colorInstagram: #e4405f;
+$colorTwitter: #55acee;
+$colorMenuHover:rgb(179, 141, 84);
+
+
+
+@mixin letra($color, $tamaño) {
+
+    color: $color;
+    font-size: $tamaño;
+}
+
+.tituloPrincipal{
+    text-align: center;
+    max-width: 100%;
+    margin-top: 30px;
+    @include letra(white, 200%);
+}
+
+p{
+    padding: 2px 3px;
+    font-size: 20px;
+    background: rgb(255,235,205);
+    background: linear-gradient(90deg, rgba(255,235,205,0.9108018207282913) 0%, rgba(255,255,255,0.9108018207282913) 94%, rgba(255,255,255,1) 100%);
+
+    font-style: oblique;    
+    line-height: 1.5;
+}
+
+.parrafo{
+    margin: 15% 10% 5% 10%;
+    background-color: rgb(202, 201, 190);
+    color: black;
+}
+
+table {
+
+    display: none;
+    max-width: 750px;
+    font-size: 20px;
+    line-height: 1.4;
+    border-collapse: collapse;
+    border: 2px solid white;
+    margin-bottom: 80px;
+    background: rgb(255,235,205);
+    background: linear-gradient(90deg, rgba(255,235,205,0.9108018207282913) 0%, rgba(255,255,255,0.9108018207282913) 94%, rgba(255,255,255,1) 100%);
+    color: black;
+
+    thead{
+        tr{
+            td{
+                font-size: 25px;
+                text-align: center;
+                font-weight: bold;    
+                color: rgb(211, 106, 106);
+            }
+        }
+    }
+
+    td{
+        border-collapse: collapse;
+        border: 2px solid white;
+        padding: 10px;
+    }
+
+    
+}
+.contenedorTarjetas{
+    max-width: 300px;
+    margin: 20px 20px;
+    margin-top: 30px;
+    text-align: center;
+    
+    .tarjetasBeneficios{
+        margin: 25px 0px 25px 0px;
+        border: none;
+        h3{
+            margin:0;
+            font-size: 1.5rem;
+            padding: 15px 15px;
+            background-color: silver;
+            color: tomato;
+            animation-name: destello;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-delay: 0.5s;
+        }
+        span{
+            background-color: silver;
+            position: absolute;
+            left: 30%;
+            animation-name: destelloCoderBicis;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes destello{
+            0%{
+                color: silver;
+            }
+            3% {
+                color:tomato;
+            }
+            25% {
+                color:tomato;
+
+            }
+            40% {
+                color: silver;
+            }
+            100% {
+                color: silver;
+
+            }
+
+        }
+        @keyframes destelloCoderBicis{
+            0% {
+                visibility: hidden;
+            }
+
+            40%{
+                visibility: hidden;
+            }
+            50%{
+                color:silver;   
+            }
+            60% {
+                visibility: visible;
+                color:tomato;
+
+            }
+            80%{
+                color: tomato;
+            }
+
+            100%{
+                opacity: 1;
+            }
+        }
+
+        p{
+            color: black;
+        }
+    }
+}
+
+
+ol{
+    margin-bottom: 60px;
+    
+    li{
+        line-height: 30px;    
+        list-style: upper-alpha;
+        list-style-position: inside;
+    }
+}
+
+.bodyGeneral {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 265px 75% 70px;
+    grid-row-gap: 55px;
+    grid-template-areas: 
+    
+                        "header"
+                        "main"
+                        "footer";
+
+}
+
+
+.bodyGaleria{
+    margin: 0px;
+    line-height: 1;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 265px 90% 70px;
+    
+    grid-template-areas: 
+    
+                        "header"
+                        "main"
+                        "footer";
+}
+
+#VideoCenter {
+    max-width: 100%;
+    max-height: 350px;
+}
+
+img {
+    height: 200px;
+    width: 270px;
+    margin: 30px 0 30px 0;
+    transition: 1.5s;
+}
+
+.BicisCentradas{
+
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    
+}
+
+#punteado{
+    max-width: 300px;
+    border: 5px dotted red;
+    margin-top: 40px;
+    color: black;
+    background: rgb(255,235,205);
+    background: linear-gradient(90deg, rgba(255,235,205,0.9108018207282913) 0%, rgba(255,255,255,0.9108018207282913) 64%, rgba(255,255,255,1) 100%);
+
+    animation-name: titilar;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    h2{
+        margin-bottom: 10px;
+    }
+    ol{
+        li{
+            margin: 5px;
+        }
+    }
+}
+@keyframes titilar{
+    0%{
+        border: 5px dotted $colorFooter;
+    }
+    50%{
+        border: 5px dotted red;
+    }
+}
+
+header{
+    grid-area: header;
+
+}
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+fieldset{
+    margin: 20px 0 20px 0;
+}
+
+
+#carouselExampleControls{
+    width: 90%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+.btn {
+    position: fixed;
+    top: 0px;
+}
+
+
+
+.menu{
+    background-color: blanchedalmond;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    
+    margin-top: 30px;
+    
+    
+    &__lista{
+        // submenu
+            list-style: none;
+            font-size:0; /* truco por el uso de inline-block*/
+    
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0;
+        
+    }
+    
+    &__item{
+        display: inline-block;
+        position:relative;
+        font-size: 14px;
+        
+    }
+    &__item--desplegable:hover ul{
+        display:block;
+        background-color: rgb(179, 141, 84);
+        z-index: 2;
+    }
+    &__enlace{
+        text-decoration: none;
+        font-size: 20px;
+        padding: 6px 30px;
+        color: rgb(64, 5, 119);
+        display: block;
+
+    }
+    &__enlace:hover{
+        background-color: rgb(179, 141, 84);
+        color: black
+    }
+    
+    
+}
+
+.submenu{
+    position: absolute;
+    display: none;
+    width: 100%;
+
+    &__item{
+        display: block;
+        text-align: initial;
+        color: rgb(64, 5, 119);
+        position: relative;
+        width: 130px;
+        
+    }
+    &__item:hover{
+        background-color: $colorMenu;
+        width: 100%
+        
+    }
+    &__enlace{
+        @extend .menu__enlace;
+        max-width: 300px;
+        width: 100%;
+        font-size: 1rem;
+        height: 100%;
+        margin-left: -18%;
+        
+    }
+    &__enlace:hover{
+        background-color: $colorMenu;
+        width: 110%;
+    }
+}
+
+.footerRedes{
+    background-color: $colorFooter;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    
+    grid-area:footer;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+
+        &__lista{
+            margin: 0;
+
+        }
+        &__lista:hover a{
+            filter:blur(2px)
+        }
+        
+        &__item{
+            display: inline-block;
+            margin-left: 25px; 
+            
+            display: inline-block;
+            margin: 0 5px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+        
+        &__enlace{
+            display: block;
+            padding: 0 10px;
+            background: #333;
+            color: white;
+            line-height:50px;
+            font-size: 18px;
+            box-shadow: 0 3px 5px 0px rgba(0,0,0,.2);
+            transition: .2s;
+            
+        }
+    &__enlace:hover{
+        margin: 0;
+        padding: 0;
+        color: white;
+
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 5px 5px 0px rgba(0,0,0,.4);
+    }
+    .facebook:hover{
+        background: $colorFacebook;
+        filter: none;
+    }
+    .instagram:hover{
+        background: $colorInstagram;
+        filter: none;
+    }
+    .twitter:hover{
+        background: $colorTwitter;
+        filter: none;
+    }
+}
+
+
+
+
+.tituloBeneficio{
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top:30px;
+
+    h3{
+        font-size: 1.5rem;
+        animation-name: flechaTitilante;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+}
+@keyframes flechaTitilante{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.ubicacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.encuentranos{
+    text-align: center;
+    margin-top: 35px;
+    animation-name: flechaTitilante;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+
+.verImagenes{
+    display:none;
+    opacity: 1;
+}
+.imagenes:hover{
+    opacity: 0.5;
+
+    .verImagenes{
+        display: block;
+        background-color: grey;
+        color: black;
+        font-size: 20px;
+        text-align: center;
+        position: relative;
+        bottom: 30px;
+        margin-left: 25%;
+        max-width: 150px;
+
+    }
+    a{
+        text-decoration: none;
+    }
+}
+// seccion contactenos
+
+#formulario{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+.contenedorFormulario{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.tituloFormulario{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.tildarCasilla{
+    max-width: 300px;
+}
+.BotonMotivo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    overflow: hidden;
+    max-width: 200px;
+    
+    &__item{
+        font-size: .6rem;
+
+    }
+    &__seleccion{
+        align-items: center;
+        justify-items: center;
+    }
+}
+
+.datosPersonales{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__leyenda{
+
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    &__item{
+        text-align: center;
+        
+    }
+
+}
+
+.genero{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+    &__masculino{
+        margin-left: 5px;
+        
+    }
+    &__femenino{
+        margin-left: 10px;
+    }
+
+}
+
+.areaTexto{
+    margin-left: 5px;
+
+    &__titulo{
+        margin: 10px;
+    }
+    &__caja{
+        margin-left: 5px;
+    }
+}
+
+.tildarCasilla{
+    margin-left: 10px;
+
+    &__notificaciones{
+        margin-left: 5px;
+    }
+}
+.botonesFormulario{
+    &__enviar:hover{
+        background-color:silver;
+        transform: scale(1.1,1.1);
+        transition: 1s;
+    }
+    &__limpiar:hover{
+        background-color:silver;
+        transform: scale(1.1,1.1);
+        transition: .5s;
+    }
+
+}
+
+
+
+
+// -----------mediaquery--------------------
+/* para tablet */
+@media only screen and (min-width: 768px) {
+    nav {
+        ul{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    
+    #formulario{
+        display: inline-block;
+        
+    }
+    .mapa{
+        width: 600px;
+        height: 450px;
+    }
+    .contenedorTarjetas{
+        max-width: 60%;
+        margin: 20px 20px;
+        margin-top: 30px;
+        text-align: center;
+        .tarjetasBeneficios{
+            border: none;
+            span{
+                display: none;
+            }
+            h3{
+                margin: 0;
+                animation-name: none;
+            }
+        }
+    }
+    #punteado{
+        max-width: 60%;
+    }
+
+    //galeria carusel
+    #carouselExampleControls{
+        margin-top: 100px;
+        margin-bottom: 50px;
+        max-width: 500px;
+    }
+
+    .imagenes{
+        margin-left: 10px;
+    }
+
+    .datosPersonales{
+        font-size: 1.5rem;
+    }
+    .contenedorFormulario{
+        margin-top: 30px;
+    }
+    .tituloFormulario{
+        font-size: 2.5rem;
+    }
+
+
+    
+
+
+}
+// fin de tablet
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* para escritorio */
+@media only screen and (min-width: 1024px){
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .menu{
+        &__lista{
+            display: flex;
+            flex-direction: row;
+            height: 60px;
+            // align-content: center;
+            align-items: center;
+        }
+        &__enlace:hover{
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+        &__item{
+            &--desplegable{
+                a{
+                    padding-right: 45px;
+                    padding-left: 35px;
+                }
+                a:hover{
+                    transition: 1s;
+
+                }
+                .submenu__item{
+                    transition: 1s;
+                }
+            }
+        }
+    }
+    .menu__item--desplegable:hover ul{
+        // background-color: green;
+        transition: 4s;
+    }
+    .submenu{
+
+        &__enlace{
+
+            position: relative;
+            right: 11px;
+            
+        }
+        &__enlace:hover{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 30px;
+
+        }
+        #proximamente{
+            position: relative;
+            right: 25px;   
+        }
+        #proximamente:hover{
+            position: relative;
+            right: 11px;
+            padding-left: 15px;
+        }
+    }
+    .bodyGeneral {
+        background-color: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1;
+    
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 180px 70% 70px;
+        grid-row-gap: 55px;
+        grid-template-areas: 
+        
+                            "header"
+                            "main"
+                            "footer";
+    
+    }
+    .parrafo{
+        margin: 30px;
+        background-color: black;
+    }
+    #nosotros{
+        margin: 50px 150px;
+        p{
+            line-height: 2;
+        }
+    }
+    .ubicacion{
+        margin-right: 30px;
+        .mapa{
+            width: 600px;
+            height: 450px;
+        }
+        .encuentranos{
+            margin:15px;
+            animation-name: flechaTitilante;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    .contenedorTarjetas{
+        display:none;
+    }
+
+    //seccion beneficio
+    .tituloBeneficio{
+        position: absolute;
+        left: 310px;
+        top: 190px;
+    }
+    table{
+        display:block;
+        margin: 0;
+        margin-left: 90px;
+        position: relative;
+        top: 190px;
+        right: 130px;
+        max-height: 300px;
+        border: none;
+        
+    }
+    #punteado{
+        margin-left:0px ;
+        margin-top:0;
+        max-width: 400px;
+        max-height: 500px;
+    }
+
+    // galeria
+
+    #carouselExampleControls{
+        margin-top: 190px;
+    }
+    main{
+        display: flex;
+        flex-direction: row;
+        align-items: initial;
+        justify-content: center;
+    }
+    #formulario{
+        display: inline-block
+    }
+    .BicisCentradas{
+        img{
+            margin: 10px;
+            border: .5px solid white;
+        }
+    }
+
+    #VideoCenter{
+        margin-left: 50px;
+
+    }
+    .datosPersonales{
+        font-size: 1.5rem;
+    }
+
+
+
+}
+// fin de escritorio

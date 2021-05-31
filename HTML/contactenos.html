@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descripcion=" content="CoderBicis es una empresa que fabrica y distribuye bicicletas codificadas para facilitar su identificacion y desalentar el robo de las mismas">
+    <title>Contacto</title>
+    <!-- <link rel="stylesheet" href="coderbicis.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../CSS/proyecto.css">
+    <link rel="stylesheet" href= "https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body class="bodyGaleria">
+    <header>
+        <h1 class="tituloPrincipal">Contactenos</h1>
+        <!-- bloque1 -->
+        <nav class="menu">
+            <ul class="menu__lista"> 
+                
+                <li class="menu__item">
+                    <a href="../index.html" class="menu__enlace">Inicio</a>
+                </li>
+
+                <li class="menu__item">
+                    <a href="quienes_somos.html" class="menu__enlace">Quienes somos?</a>
+                </li>
+
+                <li class="menu__item">
+                    <a href="beneficios.html" class="menu__enlace">Beneficios</a>
+                </li>
+                <li class="menu__item menu__item--desplegable">
+                    <a class="menu__enlace">Galeria</a>
+                    <!-- bloque2 -->
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="galeria.html" class="submenu__enlace">Bicicletas</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__enlace" id="proximamente" >Indumentaria <br>(Proximamente)</a>
+                            
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu__item">
+                    <a href="contactenos.html" class="menu__enlace">Contactenos</a>
+                </li>
+            
+            </ul>
+        </nav>
+
+    </header>
+
+    <main id="formulario"> 
+
+        <div class="contenedorFormulario">
+            <h2 class="tituloFormulario"> Complete el formulario:</h2>
+
+            <form action="">
+                <!-- bloque4 -->
+                <!-- motivo --> <br>
+            <select name="motivo" id="" class="BotonMotivo">
+                <option value="motivo" class="BotonMotivo__seleccion">Selecione un motivo...</option>
+                <option value="Producto defectuoso" class="BotonMotivo__item">Producto defectuoso</option>
+                <option value="Producto incorrecto" class="BotonMotivo__item">Producto incorrecto</option>
+                <option value="Otro" class="BotonMotivo__item">Otro</option>
+            </select>
+            <br> <br>
+            
+            <!-- bloque5 -->
+            <!-- datos personales -->
+            <fieldset class="datosPersonales">
+                <legend class="datosPersonales__leyenda"> Datos personales</legend>
+                <label for="Nombre" class="datosPersonales__item">Nombre:</label> <br>
+                <input type="text" name="Nombre" placeholder="Nombre" class="datosPersonales__item"> 
+                <br>
+
+                <label for="Apellido" class="datosPersonales__item">Apellido:</label> <br>
+                <input type="text" name="Apellido" placeholder="Apellido" class="datosPersonales__item"> <br>
+                
+                <label for="Edad" class="datosPersonales__item">Edad:</label> <br>
+                <input type="number" name="Edad" placeholder="Edad" class="datosPersonales__item"> 
+                <br>
+                
+                <label for="e-mail" class="datosPersonales__item">e-mail:</label> <br>
+                <input type="text" name="e-mail" placeholder="ejemplo@ejemplo.com" class="datosPersonales__item"> <br>
+                <br>
+
+                <!-- bloque6 -->
+                <div class="genero">
+                    
+                    <div class="genero__masculino">Masculino</div>
+                    <input type="radio" name="genero" value="Masculino"class="genero__masculino">
+                    <div class="genero__femenino">  Femenino</div>
+                    <input type="radio" name="genero" value="Femenino"class="genero__femenino">
+                    <br>
+                    
+                </div>
+            </fieldset>
+            
+            <!-- bloque7 -->
+            <div class="areaTexto">
+
+                <h4 class="areaTexto__titulo">Escriba su consulta:</h4>
+                <textarea name="Consulta" id="" cols="35" rows="15" class="areaTexto__caja"></textarea>
+            </div>
+            
+            <!-- bloque8 -->
+            <!-- boton de checkbox -->
+            <div  class="tildarCasilla">
+                <input type="checkbox" name="acepto" value="1" class="tildarCasilla__notificaciones">
+                    Deseo recibir notificaciones de productos y promociones
+                    <br>
+                </div>
+                <br>
+                <!-- bloque9 -->
+                <!-- boton de enviar resetear y el que no hace nada -->
+                <div  class="botonesFormulario">
+                    
+                    <input type="submit" value="Enviar" class="botonesFormulario__enviar">
+                    <input type="reset" value="Limpiar" class="botonesFormulario__limpiar">
+                    <input type="button" value="" class="botonesFormulario__nada">
+                </div>
+            </form>
+        </div>
+        
+    </main>
+    
+    <!-- bloque3 -->
+    <footer class="footerRedes">   
+        <ul class="footerRedes__lista">
+            <li class="footerRedes__item">
+                <a href="https://www.facebook.com" class="footerRedes__enlace facebook"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li class="footerRedes__item">
+                <a href="https://www.instagram.com" class="footerRedes__enlace   instagram"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li class="footerRedes__item">
+                <a href="https://www.instagram.com" class="footerRedes__enlace twitter"><i class="fab fa-twitter"></i></a>
+            </li>
+            
+        </ul>
+        
+    </footer>
+
+    
+    
+    
+</body>
+</html>
