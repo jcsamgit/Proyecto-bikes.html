@@ -23,7 +23,7 @@ $colorMenuHover:rgb(179, 141, 84);
     text-align: center;
     max-width: 100%;
     margin-top: 30px;
-    @include letra(white, 200%);
+    @include letra(black, 200%);
 }
 
 p{
@@ -39,7 +39,7 @@ p{
 .parrafo{
     margin: 15% 10% 5% 10%;
     background-color: rgb(202, 201, 190);
-    color: black;
+    // color: black;
 }
 
 table {
@@ -165,8 +165,8 @@ ol{
 }
 
 .bodyGeneral {
-    background-color: black;
-    color: white;
+    // background-color: black;
+    // color: white;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1;
 
@@ -186,8 +186,8 @@ ol{
 .bodyGaleria{
     margin: 0px;
     line-height: 1;
-    background-color: black;
-    color: white;
+    // background-color: black;
+    // color: white;
     font-family: Arial, Helvetica, sans-serif;
     display: none;
     display: grid;
@@ -434,7 +434,7 @@ fieldset{
 
 
 .tituloBeneficio{
-    color: white;
+    // color: white;
     font-size: 1.3rem;
     text-align: center;
     margin-top:30px;
@@ -752,8 +752,8 @@ fieldset{
         }
     }
     .bodyGeneral {
-        background-color: black;
-        color: white;
+        // background-color: black;
+        // color: white;
         font-family: Arial, Helvetica, sans-serif;
         line-height: 1;
     
@@ -770,7 +770,9 @@ fieldset{
     }
     .parrafo{
         margin: 30px;
-        background-color: black;
+        background-color: transparent;
+        overflow: scroll;
+        max-height: 70vh;
     }
     #nosotros{
         margin: 50px 150px;
@@ -805,11 +807,12 @@ fieldset{
     table{
         display:block;
         margin: 0;
-        margin-left: 90px;
+        margin-right: 90px;
+        margin-left: 30px;
         position: relative;
         top: 190px;
-        right: 130px;
-        max-height: 300px;
+        // right: 130px;
+        max-height: 400px;
         border: none;
         
     }

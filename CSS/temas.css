@@ -1,0 +1,31 @@
+#tema{
+    position: fixed;
+    top: 0;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 3px;
+    border: none;
+    text-align: center;
+    width: 80px;
+    font-size: 13px;
+}
+#tema:hover{
+    cursor: pointer;
+}
+body.modoNoche{
+    /* background-color: rgb(32,32,44); */
+    background-color: black;
+    color: white;
+}
+body.modoNoche form{
+    background-color: black;
+}
+
+body.modoNoche .parrafo{
+    color: black;
+}
+body.modoNoche #tema{
+    color: black;
+    background-color: white;
+}
